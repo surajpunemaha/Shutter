@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Shutter.iml" filepath="$PROJECT_DIR$/Shutter.iml" />
+      <module fileurl="file://D:\local_repository\Shutter\Shutter.iml" filepath="D:\local_repository\Shutter\Shutter.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\local_repository\Shutter\app\app.iml" filepath="D:\local_repository\Shutter\app\app.iml" />
     </modules>
   </component>
 </project>
