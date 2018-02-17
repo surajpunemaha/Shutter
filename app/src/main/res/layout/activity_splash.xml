@@ -25,7 +25,6 @@
             android:layout_centerHorizontal="true"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="SHUTTER"/>
-
     </RelativeLayout>
 
 </RelativeLayout>

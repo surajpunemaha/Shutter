@@ -1,3 +1,31 @@
 <resources>
-    <string name="app_name">Shutter</string>
+
+    <!-- Titles -->
+
+    <string name="app_name">SHUTTER</string>
+    <string name="helpdesk"> Helpdesk </string>
+
+
+
+    <string name="login_now">Login Now</string>
+    <string name="email_id">Email Id</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login"> Login</string>
+    <string name="or"> OR </string>
+    <string name="login_with_google"> Login with Google </string>
+    <string name="login_with_fb"> Login with Facebook </string>
+    <string name="skip">SKIP</string>
+
+    <string name="your_email_id">Your Email Id</string>
+    <string name="write_query_problem">Write Query/Problem</string>
+    <string name="revert_msg">We will revert you as soon as possible.</string>
+    <string name="five_hundred">500</string>
+    <string name="submit">SUBMIT</string>
+
+    <string name="message"> Message </string>
+    <string name="response_recorded"> Your response has been recorded. Thank You. </string>
+
+    <string name="okay"> OKAY </string>
+
 </resources>

@@ -3,4 +3,11 @@
     <color name="colorPrimary">#33a9af</color>
     <color name="colorPrimaryDark">#2e9297</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <color name="app_green">#33a9af</color>
+    <color name="white"> #ffffff </color>
+    <color name="orange"> #ff4705 </color>
+    <color name="blue"> #5461f7 </color>
+    <color name="light_gray">#e4e4e4</color>
 </resources>
