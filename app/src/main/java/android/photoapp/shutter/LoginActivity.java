@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener
+{
     TextView txtv_skip;
 
     @Override
@@ -29,7 +30,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId())
         {
             case R.id.txtv_skip :
-                Intent helpdesk = new Intent(LoginActivity.this, HelpdeskActivity.class);
+                Intent helpdesk = new Intent(LoginActivity.this, HomeActivity.class);
                 startActivity(helpdesk);
         }
     }

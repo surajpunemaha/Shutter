@@ -84,7 +84,6 @@ public class HelpdeskActivity extends AppCompatActivity implements View.OnClickL
             counter.setText(""+remain);
         }catch (Exception e)
         {
-
         }
     }
 

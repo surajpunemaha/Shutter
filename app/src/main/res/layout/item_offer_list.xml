@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:padding="3dp">
+
+
+    <ImageView
+        android:id="@+id/imgv_offer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_launcher" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:gravity="center"
+        android:layout_gravity="top"
+        android:background="@color/transparent_black">
+
+        <TextView
+            android:id="@+id/txtv_offerDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="20% OFF"/>
+
+        <TextView
+            android:id="@+id/txtv_offerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txtv_offerDiscount"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Early Bird Offer"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:background="@color/transparent_black">
+
+        <TextView
+            android:id="@+id/txtv_offerValidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Valid till"/>
+
+        <TextView
+            android:id="@+id/txtv_offerProvider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txtv_offerValidity"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Early Bird Offer"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

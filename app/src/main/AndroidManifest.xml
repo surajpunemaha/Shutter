@@ -17,11 +17,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"
-            android:theme="@style/NoActionBar"/>
-        <activity android:name=".SignUpActivity">
-        </activity>
-        <activity android:name=".HelpdeskActivity">
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/NoActionBar" />
+        <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".HelpdeskActivity"></activity>
+        <activity android:name=".HomeActivity"
+            android:theme="@style/NoActionBar">
         </activity>
     </application>
 

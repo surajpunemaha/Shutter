@@ -6,7 +6,6 @@
     <string name="helpdesk"> Helpdesk </string>
 
 
-
     <string name="login_now">Login Now</string>
     <string name="email_id">Email Id</string>
     <string name="password">Password</string>
@@ -27,5 +26,9 @@
     <string name="response_recorded"> Your response has been recorded. Thank You. </string>
 
     <string name="okay"> OKAY </string>
+    <string name="search_by"> Search by City, Category </string>
+    <string name="current_offers"> Current Offers </string>
+    <string name="most_visited"> Most Visited </string>
+    <string name="categories"> Categories </string>
 
 </resources>

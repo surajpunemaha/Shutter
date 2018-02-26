@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_gray"
+    tools:context="android.photoapp.shutter.HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpgr_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v4.view.ViewPager>
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/transparent_black"
+            android:layout_alignParentBottom="true">
+        </me.relex.circleindicator.CircleIndicator>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_green"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/imgv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ic_search_black_24dp"/>
+
+        <EditText
+            android:id="@+id/edit_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@+id/imgv_search"
+            android:textColor="@color/white"
+            android:hint="@string/search_by"
+            android:textColorHint="@color/white"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollv_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layout_offers"
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtv_offers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/current_offers"/>
+
+                <ImageView
+                    android:id="@+id/imgv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtv_offers"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/light_gray"
+                    android:src="@drawable/ic_navigate_next_black_24dp"
+                    android:layout_centerVertical="true"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recv_offers"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/txtv_offers"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toStartOf="@+id/imgv_more">
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_mostVisited"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtv_mostVisited"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/most_visited"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recv_mostVisited"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtv_mostVisited"
+                    android:layout_marginEnd="5dp">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_categories"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/gray"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtv_categories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/categories"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recv_categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtv_categories"
+                    android:layout_marginEnd="5dp">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
