@@ -21,13 +21,11 @@ public class AdapterOffersRecycler extends RecyclerView.Adapter<AdapterOffersRec
     {
         this.context = context;
         this.al_offer = al_offer;
-        Toast.makeText(context, "contruct", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
     {
-        Toast.makeText(context, "create", Toast.LENGTH_SHORT).show();
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_offer_list, parent, false);
         return new MyViewHolder(itemView);
     }
@@ -36,7 +34,6 @@ public class AdapterOffersRecycler extends RecyclerView.Adapter<AdapterOffersRec
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position)
     {
-        Toast.makeText(context, "binding", Toast.LENGTH_SHORT).show();
         holder.txtv_offerName.setText(al_offer.get(position).getOffer_name());
         holder.txtv_offerDiscount.setText(al_offer.get(position).getOffer_value());
     }

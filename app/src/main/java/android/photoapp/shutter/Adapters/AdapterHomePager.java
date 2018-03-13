@@ -8,19 +8,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 
 public class AdapterHomePager extends android.support.v4.view.PagerAdapter
 {
-    private ArrayList<Integer> images;
+    private ArrayList<String> images_url;
     private LayoutInflater inflater;
     private Context context;
 
-    public AdapterHomePager(Context context, ArrayList<Integer> images)
+    public AdapterHomePager(Context context, ArrayList<String> images_url)
     {
         this.context = context;
-        this.images=images;
+        this.images_url=images_url;
         inflater = LayoutInflater.from(context);
     }
 
@@ -33,7 +35,7 @@ public class AdapterHomePager extends android.support.v4.view.PagerAdapter
     @Override
     public int getCount()
     {
-        return images.size();
+        return images_url.size();
     }
 
     @Override
@@ -41,7 +43,9 @@ public class AdapterHomePager extends android.support.v4.view.PagerAdapter
     {
         View myImageLayout = inflater.inflate(R.layout.slider, view, false);
         ImageView myImage = (ImageView) myImageLayout.findViewById(R.id.image);
-        myImage.setImageResource(images.get(position));
+
+        Picasso.with(context).load(images_url.get(position)).into(myImage);
+
         view.addView(myImageLayout, 0);
         return myImageLayout;
     }

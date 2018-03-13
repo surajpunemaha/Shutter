@@ -108,7 +108,7 @@
             <RelativeLayout
                 android:id="@+id/layout_mostVisited"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:padding="5dp">
 
                 <TextView
@@ -132,7 +132,7 @@
             <RelativeLayout
                 android:id="@+id/layout_categories"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:background="@color/gray"
                 android:padding="5dp">
 

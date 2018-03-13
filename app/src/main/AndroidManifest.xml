@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="android.photoapp.shutter">
 
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,8 +22,10 @@
         <activity
             android:name=".LoginActivity"
             android:theme="@style/NoActionBar" />
-        <activity android:name=".SignUpActivity"></activity>
-        <activity android:name=".HelpdeskActivity"></activity>
+        <activity android:name=".SignUpActivity">
+        </activity>
+        <activity android:name=".HelpdeskActivity">
+        </activity>
         <activity android:name=".HomeActivity"
             android:theme="@style/NoActionBar">
         </activity>
