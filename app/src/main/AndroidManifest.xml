@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="android.photoapp.shutter">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -21,13 +21,22 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/NoActionBar" />
-        <activity android:name=".SignUpActivity">
+            android:theme="@style/NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".SignUpActivity"
+            android:windowSoftInputMode="stateHidden">
         </activity>
-        <activity android:name=".HelpdeskActivity">
+        <activity android:name=".HelpdeskActivity"
+            android:windowSoftInputMode="stateHidden">
         </activity>
-        <activity android:name=".HomeActivity"
-            android:theme="@style/NoActionBar">
+        <activity
+            android:name=".HomeActivity"
+            android:theme="@style/NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".SlideShowActivity"
+            android:theme="@style/NoActionBar"
+            android:screenOrientation="landscape">
         </activity>
     </application>
 

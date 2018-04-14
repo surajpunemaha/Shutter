@@ -10,6 +10,7 @@ import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextWatcher;
 import android.text.style.ForegroundColorSpan;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,7 +36,8 @@ public class HelpdeskActivity extends AppCompatActivity implements View.OnClickL
     public void setUpUi()
     {
         actionBar = getSupportActionBar();
-        if (actionBar != null) {
+        if (actionBar != null)
+        {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
         actionBar.setTitle(getResources().getString(R.string.helpdesk));
@@ -47,6 +49,18 @@ public class HelpdeskActivity extends AppCompatActivity implements View.OnClickL
 
         counter=(TextView) findViewById(R.id.txtv_counter);
         edit_query.addTextChangedListener(this);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId())
+        {
+            case android.R.id.home :
+                onBackPressed();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -88,7 +102,8 @@ public class HelpdeskActivity extends AppCompatActivity implements View.OnClickL
     }
 
     @Override
-    public void afterTextChanged(Editable s) {
+    public void afterTextChanged(Editable s)
+    {
 
     }
 }

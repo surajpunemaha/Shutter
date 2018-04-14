@@ -1,5 +1,6 @@
 package android.photoapp.shutter;
 
+import android.content.Intent;
 import android.photoapp.shutter.Adapters.AdapterCategoriesRecycler;
 import android.photoapp.shutter.Adapters.AdapterHomePager;
 import android.photoapp.shutter.Adapters.AdapterMostVisitedRecycler;
@@ -7,6 +8,7 @@ import android.photoapp.shutter.Adapters.AdapterOffersRecycler;
 import android.photoapp.shutter.Models.Categories;
 import android.photoapp.shutter.Models.Offer;
 import android.photoapp.shutter.Models.Photographer;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,22 +16,26 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
 import me.relex.circleindicator.CircleIndicator;
 
-public class HomeActivity extends AppCompatActivity
-{
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
     ViewPager viewpgr_home;
     CircleIndicator indicator;
     ArrayList<String> al_images;
     RecyclerView recv_offers, recv_mostVisited, recv_categories;
+    FloatingActionButton fab_options;
 
     ArrayList<Offer> al_offer;
     ArrayList<Photographer> al_mostvisited;
     ArrayList<Categories> al_categories;
+
+    boolean fabExpanded = false;
+    LinearLayout layout_options, layout_helpdesk, layout_about;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -64,6 +70,20 @@ public class HomeActivity extends AppCompatActivity
 
         recv_categories = (RecyclerView) findViewById(R.id.recv_categories);
         al_categories = new ArrayList<>();
+
+        fab_options = (FloatingActionButton) findViewById(R.id.fab_options);
+        fab_options.setOnClickListener(this);
+
+        layout_options = (LinearLayout) findViewById(R.id.layout_options);
+        layout_options.setVisibility(View.GONE);
+
+        layout_helpdesk = (LinearLayout) findViewById(R.id.layout_helpdesk);
+        layout_helpdesk.setOnClickListener(this);
+
+        layout_about = (LinearLayout) findViewById(R.id.layout_about);
+        layout_about.setOnClickListener(this);
+
+
     }
 
     public void getOfferDetails()
@@ -137,5 +157,43 @@ public class HomeActivity extends AppCompatActivity
         RecyclerView.LayoutManager mLayoutManager = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
         recv_categories.setLayoutManager(mLayoutManager);
         recv_mostVisited.setItemAnimator(new DefaultItemAnimator());
+    }
+
+    @Override
+    public void onClick(View v)
+    {
+        if(v.getId()==R.id.fab_options)
+        {
+            if (fabExpanded)
+            {
+                closeSubMenusFab();
+            }
+            else
+            {
+                openSubMenusFab();
+            }
+        }
+        if(v.getId()==R.id.layout_helpdesk)
+        {
+            startActivity(new Intent(HomeActivity.this, HelpdeskActivity.class));
+        }
+        if(v.getId()==R.id.layout_about)
+        {
+            startActivity(new Intent(HomeActivity.this, SlideShowActivity.class));
+        }
+    }
+
+    private void openSubMenusFab()
+    {
+        layout_options.setVisibility(View.VISIBLE);
+        fab_options.setImageResource(R.drawable.ic_close_white_36dp);
+        fabExpanded = true;
+    }
+
+    private void closeSubMenusFab()
+    {
+        layout_options.setVisibility(View.GONE);
+        fab_options.setImageResource(R.drawable.ic_more_vert_white_24dp);
+        fabExpanded = false;
     }
 }

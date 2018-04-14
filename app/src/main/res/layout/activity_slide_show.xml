@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.photoapp.shutter.SlideShowActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpager_images"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+    <ImageView
+        android:id="@+id/imgv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close_white_36dp"
+        android:layout_gravity="top|start"
+        android:layout_margin="10dp"/>
+
+    <ImageView
+        android:id="@+id/imgv_leftArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back_white_36dp"
+        android:layout_gravity="center|start"
+        android:background="@color/transparent_black"
+        android:layout_margin="10dp"/>
+
+    <ImageView
+        android:id="@+id/imgv_rightArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_forward_white_36dp"
+        android:layout_gravity="center|end"
+        android:background="@color/transparent_black"
+        android:layout_margin="10dp"/>
+
+</FrameLayout>
