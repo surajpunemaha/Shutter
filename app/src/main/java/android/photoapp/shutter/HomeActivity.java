@@ -179,7 +179,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         }
         if(v.getId()==R.id.layout_about)
         {
-            startActivity(new Intent(HomeActivity.this, SlideShowActivity.class));
+            startActivity(new Intent(HomeActivity.this, ProfileActivity.class));
         }
     }
 

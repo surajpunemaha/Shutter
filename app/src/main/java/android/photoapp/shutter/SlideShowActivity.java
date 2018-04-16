@@ -77,13 +77,15 @@ public class SlideShowActivity extends AppCompatActivity implements View.OnClick
     }
 
     @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels)
+    {
         if(position==0)
         {
             imgv_leftArrow.setVisibility(View.INVISIBLE);
             imgv_rightArrow.setVisibility(View.VISIBLE);
 
         }
+        
         if(position==1 || position == al_images.size()-2)
         {
             imgv_rightArrow.setVisibility(View.VISIBLE);

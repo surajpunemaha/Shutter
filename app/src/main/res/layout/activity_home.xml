@@ -92,7 +92,7 @@
                     <ImageView
                         android:id="@+id/imgv_more"
                         android:layout_width="wrap_content"
-                        android:layout_height="130dp"
+                        android:layout_height="120dp"
                         android:layout_alignParentEnd="true"
                         android:layout_below="@+id/txtv_offers"
                         android:layout_centerVertical="true"

@@ -22,22 +22,24 @@
         <activity
             android:name=".LoginActivity"
             android:theme="@style/NoActionBar"
-            android:windowSoftInputMode="stateHidden"/>
-        <activity android:name=".SignUpActivity"
-            android:windowSoftInputMode="stateHidden">
-        </activity>
-        <activity android:name=".HelpdeskActivity"
-            android:windowSoftInputMode="stateHidden">
-        </activity>
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SignUpActivity"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name=".HelpdeskActivity"
+            android:windowSoftInputMode="stateHidden"></activity>
         <activity
             android:name=".HomeActivity"
             android:theme="@style/NoActionBar"
-            android:windowSoftInputMode="stateHidden">
-        </activity>
-        <activity android:name=".SlideShowActivity"
-            android:theme="@style/NoActionBar"
-            android:screenOrientation="landscape">
-        </activity>
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name=".SlideShowActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile"></activity>
     </application>
 
 </manifest>

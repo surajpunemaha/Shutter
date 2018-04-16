@@ -33,7 +33,7 @@
                     android:id="@+id/txtv_helpdesk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
+                    android:padding="2dp"
                     android:text="@string/helpdesk"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textStyle="bold" />
@@ -44,9 +44,9 @@
                 android:id="@+id/fab2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
+                android:background="@color/yellow"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_more_vert_white_24dp"/>
+                android:src="@drawable/ic_help_outline_white_24dp"/>
 
         </LinearLayout>
 
@@ -71,7 +71,7 @@
                     android:id="@+id/txtv_about"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
+                    android:padding="2dp"
                     android:text="@string/about"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textStyle="bold" />
@@ -82,23 +82,20 @@
                 android:id="@+id/fab1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
+                android:background="@color/blue"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_more_vert_white_24dp"/>
 
         </LinearLayout>
-
     </LinearLayout>
-
-
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_options"
         android:layout_gravity="end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_margin="10dp"
         android:src="@drawable/ic_more_vert_white_24dp"
-        app:fabSize="normal"/>
+        app:fabSize="mini"/>
 
 </LinearLayout>

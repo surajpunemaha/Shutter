@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2211"
+        android:padding="10dp"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/layout_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imgv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location_city_green_24dp"/>
+
+            <TextView
+                android:id="@+id/txtv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/imgv_city"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Pune"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <RatingBar
+                android:id="@+id/rbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_alignParentEnd="true"
+                android:numStars="5"/>
+
+            <TextView
+                android:id="@+id/txtv_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/rbar"
+                android:layout_centerVertical="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginEnd="5dp"
+                android:text="Rating"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_stats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/black_border"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/layout_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="3dp"
+            android:background="@drawable/black_border"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txtv_viewCnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="1200"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtv_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Views"
+                android:layout_gravity="center"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_orderServe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="3dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txtv_serveCnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="166"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtv_serve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Orders Served"
+                android:layout_gravity="center"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_reviews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="3dp"
+            android:background="@drawable/black_border"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txtv_revCnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="166"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtv_reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_gravity="center"
+                android:text="Reviews"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
