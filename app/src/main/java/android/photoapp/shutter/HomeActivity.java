@@ -98,19 +98,22 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     public void getMostVisitedProfiles()
     {
-        Photographer p1 = new Photographer("1", "Suraj");
-        Photographer p2 = new Photographer("2", "Tushar");
-        Photographer p3 = new Photographer("3", "Pankaj");
-        Photographer p4 = new Photographer("4", "Swapnil");
+        Photographer p1 = new Photographer("1", "Suraj Media's","https://www.fchtexas.com/wp-content/uploads/2017/03/Photography.jpg");
+        Photographer p2 = new Photographer("2", "Square Space","https://static1.squarespace.com/static/57977ed703596efb1100196c/t/57a0d63d579fb38575c37a35/1470158419376/");
+        Photographer p3 = new Photographer("3", "Photo Maniac","http://hgopi.github.io/home/portfolios/Fotomaniac/images/photographer1.jpg");
+        Photographer p4 = new Photographer("4", "Modern Lens","http://modernlensmagazine.com/wp-content/uploads/2016/08/promistakes.jpg");
+        Photographer p5 = new Photographer("5", "Sara's Official","https://www.nyip.edu/images/cms/photo-articles/how-much-money-do-photographers-make.jpg");
+
 
         al_mostvisited.add(p1); al_mostvisited.add(p2); al_mostvisited.add(p3); al_mostvisited.add(p4);
+        al_mostvisited.add(p5);
     }
 
     public void getCategories()
     {
         Categories c1 = new Categories("1", "WildLife","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR560orWmON0npB18Wrl6O0-qZxDGTdNaP9t6DtUUBaLkNRtS1Ajw");
         Categories c2 = new Categories("2", "Wedding","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWcEaLD77zD8P1vjZdVOo3Vfi8xYlT7LKSbfWryk5iIc65hPwH");
-        Categories c3 = new Categories("3", "Product","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR560orWmON0npB18Wrl6O0-qZxDGTdNaP9t6DtUUBaLkNRtS1Ajw");
+        Categories c3 = new Categories("3", "Product","http://pictureclarity.in/uploads/topics/15154342726082.jpg");
         Categories c4 = new Categories("4", "Food","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWcEaLD77zD8P1vjZdVOo3Vfi8xYlT7LKSbfWryk5iIc65hPwH");
         Categories c5 = new Categories("5","Event","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWcEaLD77zD8P1vjZdVOo3Vfi8xYlT7LKSbfWryk5iIc65hPwH");
 
