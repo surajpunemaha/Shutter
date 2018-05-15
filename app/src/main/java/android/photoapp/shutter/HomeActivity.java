@@ -113,9 +113,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     {
         Categories c1 = new Categories("1", "WildLife","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR560orWmON0npB18Wrl6O0-qZxDGTdNaP9t6DtUUBaLkNRtS1Ajw");
         Categories c2 = new Categories("2", "Wedding","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWcEaLD77zD8P1vjZdVOo3Vfi8xYlT7LKSbfWryk5iIc65hPwH");
-        Categories c3 = new Categories("3", "Product","http://pictureclarity.in/uploads/topics/15154342726082.jpg");
-        Categories c4 = new Categories("4", "Food","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWcEaLD77zD8P1vjZdVOo3Vfi8xYlT7LKSbfWryk5iIc65hPwH");
-        Categories c5 = new Categories("5","Event","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWcEaLD77zD8P1vjZdVOo3Vfi8xYlT7LKSbfWryk5iIc65hPwH");
+        Categories c3 = new Categories("3","Candid","https://i.guim.co.uk/img/static/sys-images/Arts/Arts_/Pictures/2007/01/23/emmachadwick256.jpg?w=300&q=55&auto=format&usm=12&fit=max&s=1b7d62eb14b387a2d71a9ad0341d78c2");
+        Categories c4 = new Categories("4", "Product","http://d1marr3m5x4iac.cloudfront.net/images/block/I0-001/039/906/273-0.jpeg_/iphone-product-photography-heartpreneurs-73.jpeg");
+        Categories c5 = new Categories("5", "Food","https://78.media.tumblr.com/avatar_165bc9d68184_128.pnj");
+        Categories c6 = new Categories("6","Sports","https://a.rootsandrain.com/f/eindp/20160717-cathkin-braes-country-park/saturday/600_0560_t.jpg");
 
         al_categories.add(c1); al_categories.add(c2); al_categories.add(c3); al_categories.add(c4); al_categories.add(c5);
     }
@@ -182,7 +183,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         }
         if(v.getId()==R.id.layout_about)
         {
-            startActivity(new Intent(HomeActivity.this, ProfileActivity.class));
+            startActivity(new Intent(HomeActivity.this, PhotographersListActivity.class));
         }
     }
 

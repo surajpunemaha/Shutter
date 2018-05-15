@@ -2,9 +2,10 @@
 
     <!-- Titles -->
 
-    <string name="app_name">SHUTTER</string>
+    <string name="app_name">Shutter</string>
     <string name="helpdesk"> Helpdesk </string>
     <string name="about">About</string>
+    <string name="photographers">Photographers</string>
 
 
     <string name="login_now">Login Now</string>
@@ -25,6 +26,7 @@
     <string name="submit">SUBMIT</string>
 
     <string name="message"> Message </string>
+    <string name="addReview"> Add Review </string>
     <string name="response_recorded"> Your response has been recorded. Thank You. </string>
 
     <string name="okay"> OKAY </string>
@@ -37,20 +39,8 @@
     <string name="views"> Views </string>
     <string name="orders_served"> Orders Served </string>
     <string name="what_people_say">What People Say</string>
-
-
-    <string-array name="comments">
-        <item> THis is comment 1 </item>
-        <item> THis is comment 2 </item>
-        <item> THis is comment 3 </item>
-        <item> THis is comment 4 </item>
-        <item> THis is comment 5 </item>
-        <item> THis is comment 6 </item>
-        <item> THis is comment 7 </item>
-        <item> THis is comment 8 </item>
-        <item> THis is comment 9 </item>
-        <item> THis is comment 10 </item>
-        <item> THis is comment 11 </item>
-    </string-array>
+    <string name="get_call_back"> Get a call back </string>
+    <string name="add_rating">Add Rating</string>
+    <string name="add_comment">Add Comment</string>
 
 </resources>

@@ -18,12 +18,12 @@ import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class AdapterMostVisitedRecycler extends RecyclerView.Adapter<AdapterMostVisitedRecycler.MyViewHolder>
+public class AdapterPhotographersRecycler extends RecyclerView.Adapter<AdapterPhotographersRecycler.MyViewHolder>
 {
     public Context context;
     public ArrayList<Photographer> al_photographers;
 
-    public AdapterMostVisitedRecycler(Context context, ArrayList<Photographer> al_photographers)
+    public AdapterPhotographersRecycler(Context context, ArrayList<Photographer> al_photographers)
     {
         this.context = context;
         this.al_photographers = al_photographers;
@@ -32,7 +32,7 @@ public class AdapterMostVisitedRecycler extends RecyclerView.Adapter<AdapterMost
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
     {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_most_visited, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_photographer, parent, false);
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +48,7 @@ public class AdapterMostVisitedRecycler extends RecyclerView.Adapter<AdapterMost
     public void onBindViewHolder(MyViewHolder holder, int position)
     {
         holder.txtv_name.setText(al_photographers.get(position).getP_name());
-        Picasso.with(context).load(al_photographers.get(position).getP_url()).into(holder.imgv_profilePic);
+        Picasso.with(context).load(al_photographers.get(position).getP_url()).placeholder(R.mipmap.alpha_j).into(holder.imgv_profilePic);
     }
 
     @Override
@@ -60,13 +60,13 @@ public class AdapterMostVisitedRecycler extends RecyclerView.Adapter<AdapterMost
     public class MyViewHolder extends RecyclerView.ViewHolder
     {
         public TextView txtv_name;
-        public CircleImageView imgv_profilePic;
+        public ImageView imgv_profilePic;
 
         public MyViewHolder(View itemView)
         {
             super(itemView);
             txtv_name = (TextView) itemView.findViewById(R.id.txtv_name);
-            imgv_profilePic = (CircleImageView) itemView.findViewById(R.id.imgv_profilePic);
+            imgv_profilePic = (ImageView) itemView.findViewById(R.id.imgv_profilePic);
         }
     }
 }

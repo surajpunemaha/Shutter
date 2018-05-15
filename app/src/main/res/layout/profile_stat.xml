@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -9,7 +10,10 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
         android:weightSum="2"
         android:background="@color/white">
 
@@ -33,6 +37,7 @@
                 android:layout_toEndOf="@+id/imgv_city"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="5dp"
+                android:textColor="@color/black"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Pune"/>
 
@@ -53,7 +58,8 @@
                 android:layout_centerVertical="true"
                 style="?android:attr/ratingBarStyleSmall"
                 android:layout_alignParentEnd="true"
-                android:numStars="5"/>
+                android:numStars="5"
+                android:rating="3.5"/>
 
             <TextView
                 android:id="@+id/txtv_rating"
@@ -61,6 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toStartOf="@+id/rbar"
                 android:layout_centerVertical="true"
+                android:textColor="@color/black"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:layout_marginEnd="5dp"
                 android:text="Rating"/>
@@ -74,8 +81,8 @@
         android:layout_height="wrap_content"
         android:paddingStart="15dp"
         android:paddingEnd="15dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
         android:gravity="center"
         android:background="@color/white">
 
@@ -92,8 +99,36 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/imgv_camera"
             android:gravity="start"
+            android:textColor="@color/gray"
             android:layout_marginStart="5dp"
             android:text="category1, category 3"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/white"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/imgv_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_call_green_24dp"/>
+
+        <TextView
+            android:id="@+id/txtv_callBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/imgv_call"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/get_call_back"/>
 
     </RelativeLayout>
 
@@ -121,7 +156,7 @@
                 android:maxLines="1"
                 android:text="1200"
                 android:layout_gravity="center"
-                android:textColor="@color/black"
+                android:textColor="@color/app_green"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textStyle="bold" />
 
@@ -150,7 +185,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:text="166"
-                android:textColor="@color/black"
+                android:textColor="@color/app_green"
                 android:layout_gravity="center"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textStyle="bold" />
@@ -181,7 +216,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:text="17"
-                android:textColor="@color/black"
+                android:textColor="@color/app_green"
                 android:layout_gravity="center"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textStyle="bold" />
@@ -205,11 +240,24 @@
         android:layout_height="wrap_content"
         android:background="@color/light_gray">
 
+        <ImageView
+            android:id="@+id/imgv_addReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_rate_review_green_24dp"
+            android:padding="@dimen/imagePadding"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="false"
+            android:padding="10dp"
             android:text="@string/what_people_say"
-            android:padding="10dp"/>
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/imgv_addReview"
+            android:textColor="@color/black" />
 
     </RelativeLayout>
 
