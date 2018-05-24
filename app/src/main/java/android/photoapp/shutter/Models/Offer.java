@@ -2,18 +2,20 @@ package android.photoapp.shutter.Models;
 
 public class Offer
 {
-    public String offer_id, offer_value, offer_name, offer_validity, photgrapher_name;
+    public String offer_id, offer_value, offer_name, offer_validity, photgrapher_name, pic_url;
 
     public Offer() {
     }
 
-    public Offer(String offer_id, String offer_value, String offer_name, String offer_validity, String photgrapher_name)
+    public Offer(String offer_id, String offer_value, String offer_name, String offer_validity, String photgrapher_name,
+                 String pic_url)
     {
         this.offer_id = offer_id;
         this.offer_value = offer_value;
         this.offer_name = offer_name;
         this.offer_validity = offer_validity;
         this.photgrapher_name = photgrapher_name;
+        this.pic_url = pic_url;
     }
 
     public void setOffer_id(String offer_id) {
@@ -36,6 +38,10 @@ public class Offer
         this.photgrapher_name = photgrapher_name;
     }
 
+    public void setPic_url(String pic_url) {
+        this.pic_url = pic_url;
+    }
+
     public String getOffer_id() {
         return offer_id;
     }
@@ -54,5 +60,9 @@ public class Offer
 
     public String getPhotgrapher_name() {
         return photgrapher_name;
+    }
+
+    public String getPic_url() {
+        return pic_url;
     }
 }

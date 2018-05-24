@@ -12,19 +12,32 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imgv_logo"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_centerInParent="true"
-            android:background="@drawable/circular_logo_196" />
+            android:background="@drawable/app_logo" />
 
-        <TextView
+        <android.photoapp.shutter.Custom.TitleTextView
+            android:id="@+id/txtv_appName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageView"
             android:layout_centerHorizontal="true"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="SHUTTER"/>
+            android:layout_centerInParent="true"
+            android:textColor="@color/app_green"
+            android:textSize="35sp"
+            android:layout_below="@+id/imgv_logo"
+            android:text="@string/app_name"/>
+
     </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
 
 </RelativeLayout>

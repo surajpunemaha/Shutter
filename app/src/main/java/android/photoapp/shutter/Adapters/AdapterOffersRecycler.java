@@ -7,8 +7,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -36,6 +39,7 @@ public class AdapterOffersRecycler extends RecyclerView.Adapter<AdapterOffersRec
     {
         holder.txtv_offerName.setText(al_offer.get(position).getOffer_name());
         holder.txtv_offerDiscount.setText(al_offer.get(position).getOffer_value());
+        Picasso.with(context).load(al_offer.get(position).getPic_url()).placeholder(R.mipmap.alpha_j).into(holder.imgv_offer);
     }
 
     @Override
@@ -47,10 +51,12 @@ public class AdapterOffersRecycler extends RecyclerView.Adapter<AdapterOffersRec
     public class MyViewHolder extends RecyclerView.ViewHolder
     {
         public TextView txtv_offerDiscount, txtv_offerName, txtv_offerValidity, txtv_offerProvider;
+        public ImageView imgv_offer;
 
         public MyViewHolder(View itemView)
         {
             super(itemView);
+            imgv_offer = (ImageView) itemView.findViewById(R.id.imgv_offer);
             txtv_offerDiscount = (TextView) itemView.findViewById(R.id.txtv_offerDiscount);
             txtv_offerName = (TextView) itemView.findViewById(R.id.txtv_offerName);
             txtv_offerValidity = (TextView) itemView.findViewById(R.id.txtv_offerValidity);

@@ -2,7 +2,7 @@
 
     <!-- Titles -->
 
-    <string name="app_name">Shutter</string>
+    <string name="app_name">SHUTTER</string>
     <string name="helpdesk"> Helpdesk </string>
     <string name="about">About</string>
     <string name="photographers">Photographers</string>
@@ -30,7 +30,7 @@
     <string name="response_recorded"> Your response has been recorded. Thank You. </string>
 
     <string name="okay"> OKAY </string>
-    <string name="search_by"> Search by City, Category </string>
+    <string name="search_by"> Search by City</string>
     <string name="current_offers"> Current Offers </string>
     <string name="most_visited"> Most Visited </string>
     <string name="categories"> Categories </string>
@@ -42,5 +42,7 @@
     <string name="get_call_back"> Get a call back </string>
     <string name="add_rating">Add Rating</string>
     <string name="add_comment">Add Comment</string>
+    <string name="do_not_have_ac">Do not have an account</string>
+    <string name="signIn">Sign In</string>
 
 </resources>

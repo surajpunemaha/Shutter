@@ -3,9 +3,8 @@
     <color name="colorPrimary">#33a9af</color>
     <color name="colorPrimaryDark">#2e9297</color>
     <color name="colorAccent">#FF4081</color>
-
-
     <color name="app_green">#33a9af</color>
+    <color name="app_green_transperent">#6033a9af</color>
     <color name="white"> #ffffff </color>
     <color name="black">#000000</color>
     <color name="orange"> #ff4705 </color>

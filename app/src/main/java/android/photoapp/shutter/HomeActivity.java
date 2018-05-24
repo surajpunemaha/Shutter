@@ -12,11 +12,14 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
@@ -29,13 +32,15 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     ArrayList<String> al_images;
     RecyclerView recv_offers, recv_mostVisited, recv_categories;
     FloatingActionButton fab_options;
+    CardView cardv_more;
+    View view_trans_black;
 
     ArrayList<Offer> al_offer;
     ArrayList<Photographer> al_mostvisited;
     ArrayList<Categories> al_categories;
 
     boolean fabExpanded = false;
-    LinearLayout layout_options, layout_helpdesk, layout_about;
+    LinearLayout layout_options, layout_helpdesk, layout_about, layout_signInOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -71,6 +76,13 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         recv_categories = (RecyclerView) findViewById(R.id.recv_categories);
         al_categories = new ArrayList<>();
 
+        cardv_more = (CardView) findViewById(R.id.cardv_more);
+        cardv_more.setOnClickListener(this);
+
+        view_trans_black = (View) findViewById(R.id.view_trans_black);
+        view_trans_black.setOnClickListener(this);
+        view_trans_black.setVisibility(View.GONE);
+
         fab_options = (FloatingActionButton) findViewById(R.id.fab_options);
         fab_options.setOnClickListener(this);
 
@@ -80,20 +92,20 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         layout_helpdesk = (LinearLayout) findViewById(R.id.layout_helpdesk);
         layout_helpdesk.setOnClickListener(this);
 
+        layout_signInOut = (LinearLayout) findViewById(R.id.layout_signInOut);
+        layout_signInOut.setOnClickListener(this);
+
         layout_about = (LinearLayout) findViewById(R.id.layout_about);
         layout_about.setOnClickListener(this);
-
 
     }
 
     public void getOfferDetails()
     {
-        Offer o1 = new Offer("1","20%","offer 1", "20 March", "P1");
-        Offer o2 = new Offer("2","10%","offer 2", "23 March", "P2");
-        Offer o3 = new Offer("3","10%","offer 3", "27 March", "P3");
+        Offer o1 = new Offer("1","20%","offer 1", "20 March", "P1", "https://www.fchtexas.com/wp-content/uploads/2017/03/Photography.jpg");
+        Offer o2 = new Offer("2","10%","offer 2", "23 March", "P2", "http://modernlensmagazine.com/wp-content/uploads/2016/08/promistakes.jpg");
         al_offer.add(o1);
         al_offer.add(o2);
-        al_offer.add(o3);
     }
 
     public void getMostVisitedProfiles()
@@ -158,7 +170,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         recv_categories.setAdapter(adapterCategories);
         recv_categories.hasFixedSize();
 
-        RecyclerView.LayoutManager mLayoutManager = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
+        RecyclerView.LayoutManager mLayoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         recv_categories.setLayoutManager(mLayoutManager);
         recv_mostVisited.setItemAnimator(new DefaultItemAnimator());
     }
@@ -177,11 +189,19 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 openSubMenusFab();
             }
         }
+        if (v.getId()==R.id.view_trans_black)
+        {
+            closeSubMenusFab();
+        }
         if(v.getId()==R.id.layout_helpdesk)
         {
             startActivity(new Intent(HomeActivity.this, HelpdeskActivity.class));
         }
-        if(v.getId()==R.id.layout_about)
+        if(v.getId()==R.id.layout_signInOut)
+        {
+            startActivity(new Intent(HomeActivity.this, LoginActivity.class));
+        }
+        if(v.getId()==R.id.cardv_more)
         {
             startActivity(new Intent(HomeActivity.this, PhotographersListActivity.class));
         }
@@ -189,6 +209,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     private void openSubMenusFab()
     {
+        Animation zoom_out_animation = AnimationUtils.loadAnimation(this, R.anim.zoom_out);
+        layout_helpdesk.startAnimation(zoom_out_animation);
+        layout_signInOut.startAnimation(zoom_out_animation);
+        layout_about.startAnimation(zoom_out_animation);
+
+        view_trans_black.setVisibility(View.VISIBLE);
         layout_options.setVisibility(View.VISIBLE);
         fab_options.setImageResource(R.drawable.ic_close_white_36dp);
         fabExpanded = true;
@@ -196,6 +222,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     private void closeSubMenusFab()
     {
+        view_trans_black.setVisibility(View.GONE);
         layout_options.setVisibility(View.GONE);
         fab_options.setImageResource(R.drawable.ic_more_vert_white_24dp);
         fabExpanded = false;
